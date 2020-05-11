@@ -1,0 +1,92 @@
+*{
+	user-select: none;
+	
+}
+nav.desk ul {
+list-style-type: none;
+margin: 0 auto;
+padding: 0;
+position: fixed;
+top: 0;
+left: 0;
+overflow: hidden;
+width: 100%;
+background-color: #404040;
+
+}
+nav.desk ul li {
+float: left;
+line-height: 60px;
+text-transform: uppercase;
+cursor: pointer;
+		
+}
+nav ul li a {
+display: inline;
+color: white;
+font-size: 26px;
+padding: 30px;
+text-decoration: none;
+}
+nav ul li:hover {
+background-color: #bfbfbf;
+}
+nav ul li.active {
+background-color: #bfbfbf;
+color: black;
+}
+nav ul li.active a {
+color: black;
+}
+nav.mobile, .hamburger-btn{
+	display: none;
+}
+@media screen and (max-width: 700px){
+	nav.desk{
+		display:none;
+	}
+	nav.mobile, .hamburger-btn{
+		display: block;
+	}
+	.hamburger-btn{
+		position: relative;
+		z-index: 2;
+	}
+	.hamburger-btn .menu, .close{
+		position: fixed;
+		right: 3%;
+		top: 3%;
+		cursor: pointer;
+	}
+	nav.mobile ul {
+		list-style-type: none;
+		background-color: #404040;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;
+		display: none;
+	}
+	nav.mobile ul li {
+		text-transform: uppercase;
+		text-align: center;
+		padding: 20px;
+		cursor: pointer;
+	}
+	nav.mobile ul.active {
+		display: block;
+	}
+	
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #404040;
+color: white;
+text-align: center;
+}

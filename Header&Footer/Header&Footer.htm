@@ -1,53 +1,31 @@
 <html>
 	<head>
 		<title>Header and Footer</title>
-		<style>
-			ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 1%;
-			position: fixed;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			width: 100%;
-			background-color: #404040;
-			}
-			li {
-			float: left;
-			}
-			li	a {
-			display: inline;
-			color: white;
-			text-align: center;
-			padding: 16px;
-			font-size: 26px;
-			text-decoration: none;
-			}
-			li a:hover {
-			background-color: #bfbfbf;
-			}
-			.active {
-			background-color: #bfbfbf;
-			color: black;
-			}
-			.footer {
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			background-color: #404040;
-			color: white;
-			text-align: center;
-			}
-			
-		</style>
+		<link rel="stylesheet" href="Header&FooterStyle.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".hamburger-btn .close").hide();
+				
+				$(".hamburger-btn .menu").click(function(){
+					$(this).hide();
+					$(".hamburger-btn .close").show();
+					$("nav.mobile ul").addClass("active");
+				});
+				
+				$(".hamburger-btn .close").click(function(){
+					$(this).hide();
+					$(".hamburger-btn .menu").show();
+					$("nav.mobile ul").removeClass("active");
+				});
+			});
+		</script>
 	</head>
 	<body>
-		<div>
+		<nav class="desk">
 			<ul>
-				<li>
-					<a class="active" href="#">Home</a>
+				<li class="active">
+					<a href="#">Home</a>
 				</li>
 				<li>
 					<a href="#about">About</a>
@@ -56,7 +34,24 @@
 					<a href="#contact">Contact</a>
 				</li>
 			</ul>
-		</div>
+		</nav>
+		<nav class="mobile">
+			<div class="hamburger-btn">
+				<img class="menu" src="Img/Hamburger_icon.png" width="30px" height="30px" aria-hidden="true" />
+				<img class="close" src="Img/close-icon.png" width="30px" height="30px" aria-hidden="ture" />
+			</div>
+			<ul>
+				<li class="active">
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#about">About</a>
+				</li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
 		<div class="footer">
 			<p>Footer</p>
 		</div>
