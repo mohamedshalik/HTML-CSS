@@ -1,16 +1,22 @@
+/* will not allow the user to select the content */
 *{
 	user-select: none;
 	
 }
+/* desktop view unorderlist */
 nav.desk ul {
+/* remove the style of the unorderlist */
 list-style-type: none;
+/* remove the ruler margin */
 margin: 0 auto;
 padding: 0;
+/* make the nav menu position to fixed, top to 0, left to 0 and width to 100%. So that it can cover full width */
 position: fixed;
 top: 0;
 left: 0;
-overflow: hidden;
 width: 100%;
+/* remove the overlay so the at active and hover view will be smoth else the layout of active or hover will come out */
+overflow: hidden;
 background-color: #404040;
 
 }

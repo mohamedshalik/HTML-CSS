@@ -1,27 +1,37 @@
 <html>
 	<head>
 		<title>Header and Footer</title>
+		<!-- External Stylesheet -->
 		<link rel="stylesheet" href="Header&FooterStyle.css" />
+		<!-- importiong the google ajax jquery to run few predefind script-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+			<!-- hide the hamburger close button -->
 				$(".hamburger-btn .close").hide();
-				
+			<!-- on click on the hamburger menu button function -->
 				$(".hamburger-btn .menu").click(function(){
+				<!-- hide the hamburger menu button -->
 					$(this).hide();
+				<!-- show the hamburger close button -->
 					$(".hamburger-btn .close").show();
+				<!-- Change the class property to view all the menu options -->
 					$("nav.mobile ul").addClass("active");
 				});
-				
+			<!-- on click on the hamburger close button function -->	
 				$(".hamburger-btn .close").click(function(){
+				<!-- hide the hamburger close button -->
 					$(this).hide();
+				<!-- show the hamburger menu button -->
 					$(".hamburger-btn .menu").show();
+				<!-- Change the class property to hide all the menu options -->
 					$("nav.mobile ul").removeClass("active");
 				});
 			});
 		</script>
 	</head>
 	<body>
+	<!-- Navigation for desktop view -->
 		<nav class="desk">
 			<ul>
 				<li class="active">
@@ -35,9 +45,13 @@
 				</li>
 			</ul>
 		</nav>
+	<!-- Navigation for Mobile view -->
 		<nav class="mobile">
+		<!-- hamburger toggle button with image -->
 			<div class="hamburger-btn">
+			<!-- hamburger menu button -->
 				<img class="menu" src="Img/Hamburger_icon.png" width="30px" height="30px" aria-hidden="true" />
+			<!-- hamburger close button -->
 				<img class="close" src="Img/close-icon.png" width="30px" height="30px" aria-hidden="ture" />
 			</div>
 			<ul>
@@ -52,6 +66,7 @@
 				</li>
 			</ul>
 		</nav>
+	<!-- footer -->
 		<div class="footer">
 			<p>Footer</p>
 		</div>
